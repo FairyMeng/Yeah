@@ -1,0 +1,229 @@
+2022-08-02 19:33:26,123 - root - INFO - Flag Values:
+{
+    "L1_flag": false,
+    "batch_size": 128,
+    "ckpt_path": "/Users/mengyan/Documents/code/KTUP/log/",
+    "clipping_max_value": 5.0,
+    "data_path": "/Users/mengyan/Documents/code/KTUP/datasets/",
+    "dataset": "ml1m",
+    "early_stopping_steps_to_wait": 70000,
+    "embedding_size": 64,
+    "eval_interval_steps": 14000,
+    "eval_only_mode": false,
+    "experiment_name": "ml1m-jtransup-1659440005",
+    "filter_wrong_corrupted": true,
+    "has_visualization": true,
+    "is_report": false,
+    "joint_ratio": 0.5,
+    "kg_lambda": 1.0,
+    "kg_test_files": "valid.dat:test.dat",
+    "l2_lambda": 1e-05,
+    "learning_rate": 0.001,
+    "learning_rate_decay_when_no_progress": 0.5,
+    "load_ckpt_file": null,
+    "load_experiment_name": null,
+    "log_level": "debug",
+    "log_path": "/Users/mengyan/Documents/code/KTUP/log/",
+    "margin": 1.0,
+    "max_queue": 10,
+    "model_type": "jtransup",
+    "momentum": 0.9,
+    "negtive_samples": 1,
+    "norm_lambda": 1.0,
+    "num_preferences": 4,
+    "num_processes": 4,
+    "optimizer_type": "Adagrad",
+    "rec_test_files": "valid.dat:test.dat",
+    "seed": 0,
+    "share_embeddings": false,
+    "topn": 10,
+    "training_steps": 1400000,
+    "use_st_gumbel": false,
+    "visualization_port": 8097
+}
+2022-08-02 19:33:27,732 - root - INFO - Totally 701669 train ratings, 103239,193631 eval ratings in files: /Users/mengyan/Documents/code/KTUP/datasets/ml1m/valid.dat;/Users/mengyan/Documents/code/KTUP/datasets/ml1m/test.dat!
+2022-08-02 19:33:27,744 - root - INFO - successfully load 6040 users and 3260 items!
+2022-08-02 19:33:29,966 - root - INFO - Totally 303935 train triples, 43419,86835 eval triples in files: /Users/mengyan/Documents/code/KTUP/datasets/ml1m/kg/valid.dat;/Users/mengyan/Documents/code/KTUP/datasets/ml1m/kg/test.dat!
+2022-08-02 19:33:29,986 - root - INFO - successfully load 14708 entities and 20 relations!
+2022-08-02 19:33:30,280 - root - INFO - Find 2934 aligned items and entities!
+2022-08-02 19:33:30,281 - root - INFO - Building model.
+2022-08-02 19:33:30,332 - root - INFO - Architecture: jTransUPModel(
+  (user_embeddings): Embedding(6040, 64)
+  (item_embeddings): Embedding(3260, 64)
+  (pref_embeddings): Embedding(20, 64)
+  (pref_norm_embeddings): Embedding(20, 64)
+  (ent_embeddings): Embedding(14709, 64, padding_idx=14708)
+  (rel_embeddings): Embedding(20, 64)
+  (norm_embeddings): Embedding(20, 64)
+)
+2022-08-02 19:33:30,333 - root - INFO - Total params: 1541696.0
+2022-08-02 19:33:30,333 - root - INFO - One epoch is 10964 steps.
+2022-08-02 19:33:30,333 - root - INFO - Training.
+2022-08-02 19:33:30,334 - root - INFO - rec train loss:0.0000, kg train loss:0.0000!
+2022-08-02 19:34:43,181 - root - INFO - f1:0.0027, p:0.0049, r:0.0024, hit:0.0460, ndcg:0.0234, topn:10.
+2022-08-02 19:35:58,136 - root - INFO - f1:0.0033, p:0.0088, r:0.0026, hit:0.0790, ndcg:0.0414, topn:10.
+2022-08-02 19:41:27,379 - root - INFO - head hit:0.0005, head mean rank:7074.6134, topn:10.
+2022-08-02 19:41:27,380 - root - INFO - tail hit:0.0006, tail mean rank:7210.9301, topn:10.
+2022-08-02 19:41:27,381 - root - INFO - avg hit:0.0006, avg mean rank:7142.7718, topn:10.
+2022-08-02 19:48:41,864 - root - INFO - head hit:0.0006, head mean rank:7084.6930, topn:10.
+2022-08-02 19:48:41,865 - root - INFO - tail hit:0.0004, tail mean rank:7212.7438, topn:10.
+2022-08-02 19:48:41,865 - root - INFO - avg hit:0.0005, avg mean rank:7148.7184, topn:10.
+2022-08-02 21:27:42,137 - root - INFO - rec train loss:24.9169, kg train loss:97.6937!
+2022-08-02 21:28:57,576 - root - INFO - f1:0.0231, p:0.0359, r:0.0235, hit:0.2684, ndcg:0.1493, topn:10.
+2022-08-02 21:30:11,749 - root - INFO - f1:0.0283, p:0.0634, r:0.0247, hit:0.4058, ndcg:0.2236, topn:10.
+2022-08-02 21:35:46,553 - root - INFO - head hit:0.0008, head mean rank:6807.5847, topn:10.
+2022-08-02 21:35:46,554 - root - INFO - tail hit:0.0322, tail mean rank:5392.4819, topn:10.
+2022-08-02 21:35:46,554 - root - INFO - avg hit:0.0165, avg mean rank:6100.0333, topn:10.
+2022-08-02 21:42:44,748 - root - INFO - head hit:0.0008, head mean rank:6825.4754, topn:10.
+2022-08-02 21:42:44,748 - root - INFO - tail hit:0.0336, tail mean rank:5399.5216, topn:10.
+2022-08-02 21:42:44,748 - root - INFO - avg hit:0.0172, avg mean rank:6112.4985, topn:10.
+2022-08-02 21:42:44,771 - root - INFO - Checkpointing ...
+2022-08-02 21:48:44,181 - root - INFO - rec train loss:22.6445, kg train loss:89.0242!
+2022-08-02 21:49:59,031 - root - INFO - f1:0.0300, p:0.0474, r:0.0307, hit:0.3286, ndcg:0.1823, topn:10.
+2022-08-02 21:51:19,413 - root - INFO - f1:0.0365, p:0.0814, r:0.0323, hit:0.4690, ndcg:0.2649, topn:10.
+2022-08-02 21:56:44,559 - root - INFO - head hit:0.0012, head mean rank:6211.7188, topn:10.
+2022-08-02 21:56:44,560 - root - INFO - tail hit:0.0935, tail mean rank:4909.8139, topn:10.
+2022-08-02 21:56:44,560 - root - INFO - avg hit:0.0474, avg mean rank:5560.7663, topn:10.
+2022-08-02 22:03:39,045 - root - INFO - head hit:0.0013, head mean rank:6228.3857, topn:10.
+2022-08-02 22:03:39,047 - root - INFO - tail hit:0.0956, tail mean rank:4917.2811, topn:10.
+2022-08-02 22:03:39,047 - root - INFO - avg hit:0.0485, avg mean rank:5572.8334, topn:10.
+2022-08-02 22:03:39,072 - root - INFO - Checkpointing ...
+2022-08-02 22:09:39,737 - root - INFO - rec train loss:21.6195, kg train loss:84.6350!
+2022-08-02 22:10:52,488 - root - INFO - f1:0.0338, p:0.0532, r:0.0345, hit:0.3551, ndcg:0.1965, topn:10.
+2022-08-02 22:12:04,671 - root - INFO - f1:0.0398, p:0.0892, r:0.0351, hit:0.4924, ndcg:0.2807, topn:10.
+2022-08-02 22:17:35,907 - root - INFO - head hit:0.0018, head mean rank:5772.5307, topn:10.
+2022-08-02 22:17:35,909 - root - INFO - tail hit:0.1344, tail mean rank:4599.6517, topn:10.
+2022-08-02 22:17:35,909 - root - INFO - avg hit:0.0681, avg mean rank:5186.0912, topn:10.
+2022-08-02 22:25:26,743 - root - INFO - head hit:0.0019, head mean rank:5788.3176, topn:10.
+2022-08-02 22:25:26,744 - root - INFO - tail hit:0.1363, tail mean rank:4607.5312, topn:10.
+2022-08-02 22:25:26,744 - root - INFO - avg hit:0.0691, avg mean rank:5197.9244, topn:10.
+2022-08-02 22:25:26,778 - root - INFO - Checkpointing ...
+2022-08-02 22:31:53,356 - root - INFO - rec train loss:20.7397, kg train loss:81.5011!
+2022-08-02 22:33:18,873 - root - INFO - f1:0.0351, p:0.0555, r:0.0358, hit:0.3647, ndcg:0.2032, topn:10.
+2022-08-02 22:34:45,991 - root - INFO - f1:0.0413, p:0.0936, r:0.0362, hit:0.5031, ndcg:0.2882, topn:10.
+2022-08-02 22:41:03,351 - root - INFO - head hit:0.0026, head mean rank:5422.7871, topn:10.
+2022-08-02 22:41:03,351 - root - INFO - tail hit:0.1570, tail mean rank:4372.6008, topn:10.
+2022-08-02 22:41:03,351 - root - INFO - avg hit:0.0798, avg mean rank:4897.6939, topn:10.
+2022-08-02 22:48:55,709 - root - INFO - head hit:0.0026, head mean rank:5436.7890, topn:10.
+2022-08-02 22:48:55,709 - root - INFO - tail hit:0.1586, tail mean rank:4380.0506, topn:10.
+2022-08-02 22:48:55,710 - root - INFO - avg hit:0.0806, avg mean rank:4908.4198, topn:10.
+2022-08-02 22:48:55,740 - root - INFO - Checkpointing ...
+2022-08-02 22:55:15,888 - root - INFO - rec train loss:20.1088, kg train loss:78.9601!
+2022-08-02 22:56:33,374 - root - INFO - f1:0.0359, p:0.0571, r:0.0366, hit:0.3675, ndcg:0.2060, topn:10.
+2022-08-02 22:57:47,211 - root - INFO - f1:0.0422, p:0.0962, r:0.0370, hit:0.5091, ndcg:0.2912, topn:10.
+2022-08-02 23:03:28,982 - root - INFO - head hit:0.0035, head mean rank:5133.5900, topn:10.
+2022-08-02 23:03:28,983 - root - INFO - tail hit:0.1691, tail mean rank:4193.3308, topn:10.
+2022-08-02 23:03:28,983 - root - INFO - avg hit:0.0863, avg mean rank:4663.4604, topn:10.
+2022-08-02 23:10:53,699 - root - INFO - head hit:0.0036, head mean rank:5146.9259, topn:10.
+2022-08-02 23:10:53,700 - root - INFO - tail hit:0.1706, tail mean rank:4200.9232, topn:10.
+2022-08-02 23:10:53,700 - root - INFO - avg hit:0.0871, avg mean rank:4673.9245, topn:10.
+2022-08-02 23:10:53,726 - root - INFO - Checkpointing ...
+2022-08-02 23:17:06,803 - root - INFO - rec train loss:19.6043, kg train loss:76.9615!
+2022-08-02 23:18:22,586 - root - INFO - f1:0.0366, p:0.0585, r:0.0371, hit:0.3709, ndcg:0.2067, topn:10.
+2022-08-02 23:19:38,707 - root - INFO - f1:0.0432, p:0.0983, r:0.0380, hit:0.5147, ndcg:0.2936, topn:10.
+2022-08-02 23:25:08,612 - root - INFO - head hit:0.0047, head mean rank:4888.4428, topn:10.
+2022-08-02 23:25:08,615 - root - INFO - tail hit:0.1768, tail mean rank:4047.9377, topn:10.
+2022-08-02 23:25:08,615 - root - INFO - avg hit:0.0908, avg mean rank:4468.1902, topn:10.
+2022-08-02 23:32:29,706 - root - INFO - head hit:0.0046, head mean rank:4901.0154, topn:10.
+2022-08-02 23:32:29,708 - root - INFO - tail hit:0.1779, tail mean rank:4055.5241, topn:10.
+2022-08-02 23:32:29,708 - root - INFO - avg hit:0.0913, avg mean rank:4478.2698, topn:10.
+2022-08-02 23:32:29,747 - root - INFO - Checkpointing ...
+2022-08-02 23:38:40,137 - root - INFO - rec train loss:19.1407, kg train loss:75.1654!
+2022-08-02 23:39:56,993 - root - INFO - f1:0.0373, p:0.0598, r:0.0379, hit:0.3750, ndcg:0.2080, topn:10.
+2022-08-02 23:41:12,943 - root - INFO - f1:0.0436, p:0.0992, r:0.0385, hit:0.5199, ndcg:0.2954, topn:10.
+2022-08-02 23:46:53,479 - root - INFO - head hit:0.0056, head mean rank:4677.7392, topn:10.
+2022-08-02 23:46:53,480 - root - INFO - tail hit:0.1817, tail mean rank:3925.4755, topn:10.
+2022-08-02 23:46:53,480 - root - INFO - avg hit:0.0937, avg mean rank:4301.6073, topn:10.
+2022-08-02 23:54:32,782 - root - INFO - head hit:0.0058, head mean rank:4689.2423, topn:10.
+2022-08-02 23:54:32,782 - root - INFO - tail hit:0.1825, tail mean rank:3933.3901, topn:10.
+2022-08-02 23:54:32,782 - root - INFO - avg hit:0.0942, avg mean rank:4311.3162, topn:10.
+2022-08-02 23:54:32,808 - root - INFO - Checkpointing ...
+2022-08-03 00:00:37,874 - root - INFO - rec train loss:18.7282, kg train loss:73.5515!
+2022-08-03 00:01:54,142 - root - INFO - f1:0.0376, p:0.0605, r:0.0381, hit:0.3758, ndcg:0.2082, topn:10.
+2022-08-03 00:03:10,240 - root - INFO - f1:0.0436, p:0.0999, r:0.0383, hit:0.5182, ndcg:0.2947, topn:10.
+2022-08-03 00:08:52,768 - root - INFO - head hit:0.0065, head mean rank:4495.2952, topn:10.
+2022-08-03 00:08:52,769 - root - INFO - tail hit:0.1855, tail mean rank:3822.0966, topn:10.
+2022-08-03 00:08:52,769 - root - INFO - avg hit:0.0960, avg mean rank:4158.6959, topn:10.
+2022-08-03 00:16:16,854 - root - INFO - head hit:0.0068, head mean rank:4506.0826, topn:10.
+2022-08-03 00:16:16,855 - root - INFO - tail hit:0.1861, tail mean rank:3830.1410, topn:10.
+2022-08-03 00:16:16,855 - root - INFO - avg hit:0.0964, avg mean rank:4168.1118, topn:10.
+2022-08-03 00:16:16,884 - root - INFO - Checkpointing ...
+2022-08-03 00:22:26,050 - root - INFO - rec train loss:18.3677, kg train loss:72.0584!
+2022-08-03 00:23:42,732 - root - INFO - f1:0.0375, p:0.0605, r:0.0381, hit:0.3757, ndcg:0.2075, topn:10.
+2022-08-03 00:24:59,263 - root - INFO - f1:0.0437, p:0.1003, r:0.0384, hit:0.5192, ndcg:0.2945, topn:10.
+2022-08-03 00:30:35,011 - root - INFO - head hit:0.0075, head mean rank:4335.7664, topn:10.
+2022-08-03 00:30:35,012 - root - INFO - tail hit:0.1882, tail mean rank:3732.4781, topn:10.
+2022-08-03 00:30:35,012 - root - INFO - avg hit:0.0978, avg mean rank:4034.1222, topn:10.
+2022-08-03 00:38:05,610 - root - INFO - head hit:0.0078, head mean rank:4345.5358, topn:10.
+2022-08-03 00:38:05,611 - root - INFO - tail hit:0.1887, tail mean rank:3740.7347, topn:10.
+2022-08-03 00:38:05,612 - root - INFO - avg hit:0.0982, avg mean rank:4043.1352, topn:10.
+2022-08-03 00:45:26,747 - root - INFO - rec train loss:18.0558, kg train loss:70.9483!
+2022-08-03 00:46:41,452 - root - INFO - f1:0.0376, p:0.0608, r:0.0379, hit:0.3745, ndcg:0.2063, topn:10.
+2022-08-03 00:47:55,457 - root - INFO - f1:0.0439, p:0.1008, r:0.0385, hit:0.5199, ndcg:0.2936, topn:10.
+2022-08-03 00:53:24,463 - root - INFO - head hit:0.0084, head mean rank:4194.2180, topn:10.
+2022-08-03 00:53:24,463 - root - INFO - tail hit:0.1906, tail mean rank:3653.7799, topn:10.
+2022-08-03 00:53:24,463 - root - INFO - avg hit:0.0995, avg mean rank:3923.9990, topn:10.
+2022-08-03 01:00:40,013 - root - INFO - head hit:0.0089, head mean rank:4202.9394, topn:10.
+2022-08-03 01:00:40,013 - root - INFO - tail hit:0.1907, tail mean rank:3662.2678, topn:10.
+2022-08-03 01:00:40,013 - root - INFO - avg hit:0.0998, avg mean rank:3932.6036, topn:10.
+2022-08-03 01:00:40,041 - root - INFO - No improvement after one epoch. Lowering learning rate.
+2022-08-03 01:08:09,359 - root - INFO - rec train loss:18.3400, kg train loss:72.1359!
+2022-08-03 01:09:23,027 - root - INFO - f1:0.0396, p:0.0632, r:0.0406, hit:0.3868, ndcg:0.2124, topn:10.
+2022-08-03 01:10:36,792 - root - INFO - f1:0.0462, p:0.1039, r:0.0411, hit:0.5329, ndcg:0.3016, topn:10.
+2022-08-03 01:16:05,326 - root - INFO - head hit:0.0097, head mean rank:4181.2548, topn:10.
+2022-08-03 01:16:05,328 - root - INFO - tail hit:0.1967, tail mean rank:3574.3988, topn:10.
+2022-08-03 01:16:05,328 - root - INFO - avg hit:0.1032, avg mean rank:3877.8268, topn:10.
+2022-08-03 01:23:21,220 - root - INFO - head hit:0.0101, head mean rank:4191.4898, topn:10.
+2022-08-03 01:23:21,222 - root - INFO - tail hit:0.1965, tail mean rank:3579.9414, topn:10.
+2022-08-03 01:23:21,222 - root - INFO - avg hit:0.1033, avg mean rank:3885.7156, topn:10.
+2022-08-03 01:23:21,249 - root - INFO - Checkpointing ...
+2022-08-03 01:30:46,708 - root - INFO - rec train loss:17.7891, kg train loss:69.8165!
+2022-08-03 01:32:01,307 - root - INFO - f1:0.0391, p:0.0627, r:0.0401, hit:0.3836, ndcg:0.2106, topn:10.
+2022-08-03 01:33:15,921 - root - INFO - f1:0.0458, p:0.1033, r:0.0407, hit:0.5310, ndcg:0.2971, topn:10.
+2022-08-03 01:38:45,241 - root - INFO - head hit:0.0110, head mean rank:3990.1861, topn:10.
+2022-08-03 01:38:45,243 - root - INFO - tail hit:0.1993, tail mean rank:3475.7265, topn:10.
+2022-08-03 01:38:45,243 - root - INFO - avg hit:0.1051, avg mean rank:3732.9563, topn:10.
+2022-08-03 01:46:01,154 - root - INFO - head hit:0.0113, head mean rank:3999.1209, topn:10.
+2022-08-03 01:46:01,155 - root - INFO - tail hit:0.1985, tail mean rank:3481.0461, topn:10.
+2022-08-03 01:46:01,155 - root - INFO - avg hit:0.1049, avg mean rank:3740.0835, topn:10.
+2022-08-03 01:53:23,375 - root - INFO - rec train loss:17.4114, kg train loss:68.3090!
+2022-08-03 01:54:37,748 - root - INFO - f1:0.0388, p:0.0624, r:0.0396, hit:0.3810, ndcg:0.2090, topn:10.
+2022-08-03 01:55:51,760 - root - INFO - f1:0.0453, p:0.1030, r:0.0401, hit:0.5267, ndcg:0.2946, topn:10.
+2022-08-03 02:01:20,345 - root - INFO - head hit:0.0116, head mean rank:3854.8494, topn:10.
+2022-08-03 02:01:20,347 - root - INFO - tail hit:0.2002, tail mean rank:3405.7731, topn:10.
+2022-08-03 02:01:20,347 - root - INFO - avg hit:0.1059, avg mean rank:3630.3112, topn:10.
+2022-08-03 02:08:36,730 - root - INFO - head hit:0.0124, head mean rank:3862.7385, topn:10.
+2022-08-03 02:08:36,730 - root - INFO - tail hit:0.2000, tail mean rank:3410.9620, topn:10.
+2022-08-03 02:08:36,730 - root - INFO - avg hit:0.1062, avg mean rank:3636.8503, topn:10.
+2022-08-03 02:08:36,755 - root - INFO - No improvement after one epoch. Lowering learning rate.
+2022-08-03 02:16:02,903 - root - INFO - rec train loss:17.4797, kg train loss:68.7283!
+2022-08-03 02:17:28,364 - root - INFO - f1:0.0388, p:0.0623, r:0.0396, hit:0.3798, ndcg:0.2083, topn:10.
+2022-08-03 02:18:47,344 - root - INFO - f1:0.0459, p:0.1032, r:0.0411, hit:0.5291, ndcg:0.2950, topn:10.
+2022-08-03 02:24:17,382 - root - INFO - head hit:0.0120, head mean rank:3853.1604, topn:10.
+2022-08-03 02:24:17,382 - root - INFO - tail hit:0.2018, tail mean rank:3374.3894, topn:10.
+2022-08-03 02:24:17,382 - root - INFO - avg hit:0.1069, avg mean rank:3613.7749, topn:10.
+2022-08-03 02:31:36,031 - root - INFO - head hit:0.0128, head mean rank:3860.6747, topn:10.
+2022-08-03 02:31:36,032 - root - INFO - tail hit:0.2019, tail mean rank:3380.6106, topn:10.
+2022-08-03 02:31:36,032 - root - INFO - avg hit:0.1074, avg mean rank:3620.6426, topn:10.
+2022-08-03 02:31:36,061 - root - INFO - No improvement after one epoch. Lowering learning rate.
+2022-08-03 02:37:37,375 - root - INFO - rec train loss:17.4976, kg train loss:68.6488!
+2022-08-03 02:38:52,937 - root - INFO - f1:0.0389, p:0.0621, r:0.0400, hit:0.3828, ndcg:0.2094, topn:10.
+2022-08-03 02:40:07,799 - root - INFO - f1:0.0458, p:0.1029, r:0.0409, hit:0.5286, ndcg:0.2951, topn:10.
+2022-08-03 02:45:37,578 - root - INFO - head hit:0.0122, head mean rank:3852.6653, topn:10.
+2022-08-03 02:45:37,579 - root - INFO - tail hit:0.2026, tail mean rank:3358.9449, topn:10.
+2022-08-03 02:45:37,580 - root - INFO - avg hit:0.1074, avg mean rank:3605.8051, topn:10.
+2022-08-03 02:52:54,078 - root - INFO - head hit:0.0130, head mean rank:3859.7468, topn:10.
+2022-08-03 02:52:54,078 - root - INFO - tail hit:0.2028, tail mean rank:3365.2696, topn:10.
+2022-08-03 02:52:54,079 - root - INFO - avg hit:0.1079, avg mean rank:3612.5082, topn:10.
+2022-08-03 02:52:54,106 - root - INFO - No improvement after one epoch. Lowering learning rate.
+2022-08-03 02:58:57,772 - root - INFO - rec train loss:17.4694, kg train loss:68.5793!
+2022-08-03 03:00:12,541 - root - INFO - f1:0.0390, p:0.0620, r:0.0401, hit:0.3853, ndcg:0.2100, topn:10.
+2022-08-03 03:01:26,669 - root - INFO - f1:0.0456, p:0.1027, r:0.0407, hit:0.5286, ndcg:0.2947, topn:10.
+2022-08-03 03:06:55,881 - root - INFO - head hit:0.0122, head mean rank:3851.5163, topn:10.
+2022-08-03 03:06:55,883 - root - INFO - tail hit:0.2028, tail mean rank:3351.3691, topn:10.
+2022-08-03 03:06:55,883 - root - INFO - avg hit:0.1075, avg mean rank:3601.4427, topn:10.
+2022-08-03 03:14:11,813 - root - INFO - head hit:0.0131, head mean rank:3858.8314, topn:10.
+2022-08-03 03:14:11,814 - root - INFO - tail hit:0.2032, tail mean rank:3358.0199, topn:10.
+2022-08-03 03:14:11,814 - root - INFO - avg hit:0.1081, avg mean rank:3608.4257, topn:10.
+2022-08-03 03:14:11,838 - root - INFO - No improvement after one epoch. Lowering learning rate.
+2022-08-03 03:14:13,805 - root - INFO - No improvement after 70000 steps. Stopping training.
