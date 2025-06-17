@@ -1,7 +1,7 @@
 import sys
 import gflags
-from jTransUP.models import knowledgable_recommendation
-from jTransUP.models.base import get_flags, flag_defaults
+from Yeah_Rec.models import knowledgable_recommendation
+from Yeah_Rec.models.base import get_flags, flag_defaults
 
 FLAGS = gflags.FLAGS
 
