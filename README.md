@@ -17,7 +17,7 @@ some required packages are included in *requirements.txt*.
 We specify the general parameters by setting flags like optimizer or learning rate, which can be found in './models/base.py'.
 
 ## run
-`python run_knowledgable_recommendation.py -model_type yeah -dataset ml1m -data_path /Users/yeahm/Documents/code/PR-Yeah/datasets/ -log_path /Users/yeahm/Documents/code/PR-Yeah/log/ -rec_test_files valid.dat:test.dat -nohas_visualization`
+`python run_knowledgable_recommendation.py -model_type yeah -dataset ml1m -data_path ~/datasets/ -log_path ~/log/ -rec_test_files valid.dat:test.dat -nohas_visualization`
 
 ## 项目结构
 
